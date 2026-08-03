@@ -40,3 +40,4 @@ traces/
 .DS_Store
 jenkins.war
 command.txt
+.vscode/
