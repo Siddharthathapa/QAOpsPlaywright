@@ -6,3 +6,37 @@ test-results/
 *.png
 state.json
 temp_explore.js
+
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+allure-results/
+allure-report/
+.DS_Store
+.env
+
+# Dependencies
+node_modules/
+
+# Playwright generated files
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Allure generated files
+allure-results/
+allure-report/
+
+# Test artifacts
+screenshots/
+videos/
+traces/
+*.zip
+
+# Environment and macOS
+.env
+.DS_Store
+jenkins.war
+command.txt
