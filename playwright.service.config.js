@@ -22,14 +22,17 @@ export default defineConfig(
     If you're already using other reporters, add them to this array.
     */
     reporter: [
-     ['list'],
-     ["html", { open: "never" }],
-     [
-       "@azure/playwright/reporter",
-       {
-         enableGitHubSummary: true,
-       },
-     ],
+      ['list'],
+      ['html', {
+        outputFolder: 'playwright-report',
+        open: 'never'
+      }],
+      [
+        '@azure/playwright/reporter',
+        {
+          enableGitHubSummary: true
+        }
+      ]
     ],
   }
 );
