@@ -24,10 +24,13 @@ jobs:
     - name: Run Playwright tests
       env:
         PLAYWRIGHT_SERVICE_URL: ${{ vars.PLAYWRIGHT_SERVICE_URL }}
-      run: npx playwright test --config=playwright.service.config.js --workers=1 --reporter=list
-    - uses: actions/upload-artifact@v6
+      run: npx playwright test --config=playwright.service.config.js --workers=4
+
+    - name: Upload playwright report
       if: ${{ !cancelled() }}
+      uses: actions/upload-artifact@v6
       with:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+        if-no-files-found: warn
