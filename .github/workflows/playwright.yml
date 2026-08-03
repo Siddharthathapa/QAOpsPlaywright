@@ -26,7 +26,7 @@ jobs:
         PLAYWRIGHT_SERVICE_URL: ${{ vars.PLAYWRIGHT_SERVICE_URL }}
       run: npx playwright test --config=playwright.service.config.js \
           --workers=1 \
-          --reoirter=list
+          --reporter=list
     - uses: actions/upload-artifact@v6
       if: ${{ !cancelled() }}
       with:
